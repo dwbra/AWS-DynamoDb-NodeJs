@@ -1,23 +1,40 @@
-import createTable from "../service/createTable.js";
+import getDbItem from "../service/getItem.js";
+import putItemIntoDb from "../service/putItem.js";
+import batchWriteItemsIntoDb from "../service/batchWriteItem.js";
 
 /**
- * Create a new table
+ * Get an item from the db table
  * @param {Object} req HTTP Request from Postman.
  * @param {Object} res Response from the server to the client.
  */
-export const createNewTable = async (req, res) => {
-  const result = await createTable(req.body);
+export const getItem = async (req, res) => {
+  const result = await getDbItem(req.body);
   return res.json(result);
 };
 
-//Delete Table
+/**
+ * Put an item into the db table
+ * @param {Object} req HTTP Request from Postman.
+ * @param {Object} res Response from the server to the client.
+ */
+export const putItem = async (req, res) => {
+  const { tableName, itemObject } = req.body;
+  const result = await putItemIntoDb(tableName, itemObject);
+  return res.json(result);
+};
 
-//List Tables
+//updateItem
 
-//Create Entry
+//deleteItem
 
-//Update Entry
+//BatchGetItem
 
-//Query Entry
-
-//Delete Entry
+/**
+ * Put an item into the db table
+ * @param {Object} req HTTP Request from Postman.
+ * @param {Object} res Response from the server to the client.
+ */
+export const batchWriteItem = async (req, res) => {
+  const result = await batchWriteItemsIntoDb(req.body);
+  return res.json(result);
+};

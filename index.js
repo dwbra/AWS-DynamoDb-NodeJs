@@ -1,6 +1,7 @@
 import { DynamoDBClient, ListTablesCommand } from "@aws-sdk/client-dynamodb";
 import express from "express";
 import cors from "cors";
+import dbRoutes from "./routes/dbRoutes.js";
 
 const app = express();
 
