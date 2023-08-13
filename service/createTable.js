@@ -40,17 +40,18 @@ const input = {
     ReadCapacityUnits: 5,
     WriteCapacityUnits: 5,
   },
-  //For when you want an index that uses the primary partition key
+  // For when you want an index that uses the primary partition key
+  // This is to help reduce query times
   LocalSecondaryIndexes: [
     {
-      IndexName: "GenreIndex",
+      IndexName: "AlbumTitleIndex",
       KeySchema: [
         {
           AttributeName: "Artist",
           KeyType: "HASH",
         },
         {
-          AttributeName: "Genre",
+          AttributeName: "AlbumTitle",
           KeyType: "RANGE",
         },
       ],
@@ -64,15 +65,29 @@ const input = {
   //For when you want to create an index that does not require the primary table partition key (primary-key).
   GlobalSecondaryIndexes: [
     {
-      IndexName: "AlbumTitleByYearIndex",
+      IndexName: "GenreIndex",
       KeySchema: [
         {
-          AttributeName: "AlbumTitle",
+          AttributeName: "Genre",
           KeyType: "HASH",
         },
+      ],
+      Projection: {
+        //All of the table attributes are projected into the index.
+        ProjectionType: "ALL",
+      },
+      //https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_ProvisionedThroughput.html
+      ProvisionedThroughput: {
+        ReadCapacityUnits: 5,
+        WriteCapacityUnits: 5,
+      },
+    },
+    {
+      IndexName: "YearReleasedIndex",
+      KeySchema: [
         {
           AttributeName: "YearReleased",
-          KeyType: "RANGE",
+          KeyType: "HASH",
         },
       ],
       Projection: {
@@ -88,6 +103,9 @@ const input = {
   ],
 };
 
+/**
+ * A self invoked function for developers to create a dynamodb table.
+ */
 (async () => {
   const command = new CreateTableCommand(input);
   const response = await client.send(command);

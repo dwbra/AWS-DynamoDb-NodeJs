@@ -1,0 +1,139 @@
+{
+  "RequestItems": {
+    "Daniels-Music-Table": [
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "1972" },
+            "Artist": { "S": "Elton John" },
+            "SongLength": { "S": "5:12" },
+            "AlbumTitle": { "S": "Honky Château" },
+            "Genre": { "S": "Rock" },
+            "SongTitle": { "S": "Honky Cat" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2019" },
+            "Artist": { "S": "Doja Cat" },
+            "SongLength": { "S": "3:57" },
+            "AlbumTitle": { "S": "Hot Pink" },
+            "Genre": { "S": "Pop" },
+            "SongTitle": { "S": "Say So" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2011" },
+            "Artist": { "S": "Michael Franks" },
+            "SongLength": { "S": "5:57" },
+            "AlbumTitle": { "S": "Time Together" },
+            "Genre": { "S": "Jazz" },
+            "SongTitle": { "S": "Clarity" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "1959" },
+            "Artist": { "S": "Chet Baker" },
+            "SongLength": { "S": "6:53" },
+            "AlbumTitle": { "S": "Chet" },
+            "Genre": { "S": "Jazz" },
+            "SongTitle": { "S": "Alone Together" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "Artist": { "S": "Led Zeppelin" },
+            "SongTitle": { "S": "Stairway to Heaven" },
+            "AlbumTitle": { "S": "Led Zeppelin IV" },
+            "Genre": { "S": "Rock n Roll" },
+            "YearReleased": { "N": "1972" },
+            "SongLength": { "S": "8:02" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2017" },
+            "Artist": { "S": "Emancipator" },
+            "SongLength": { "S": "3:35" },
+            "AlbumTitle": { "S": "Baralku" },
+            "Genre": { "S": "Ambient" },
+            "SongTitle": { "S": "Baralku" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2016" },
+            "Artist": { "S": "Tycho" },
+            "SongLength": { "S": "4:53" },
+            "AlbumTitle": { "S": "Epoch" },
+            "Genre": { "S": "Ambient" },
+            "SongTitle": { "S": "Glider" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2003" },
+            "Artist": { "S": "Jack Johnson" },
+            "SongLength": { "S": "3:59" },
+            "AlbumTitle": { "S": "On And On" },
+            "Genre": { "S": "Acoustic" },
+            "SongTitle": { "S": "Taylor" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2020" },
+            "Artist": { "S": "Break My Heart" },
+            "SongLength": { "S": "3:04" },
+            "AlbumTitle": { "S": "Future Nostalgia" },
+            "Genre": { "S": "Pop" },
+            "SongTitle": { "S": "Dua Lipa" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "Artist": { "S": "Phil Collins" },
+            "SongTitle": { "S": "You'll be in my heard" },
+            "AlbumTitle": { "S": "Tarzan" },
+            "Genre": { "S": "Pop" },
+            "YearReleased": { "N": "1999" },
+            "SongLength": { "S": "4:18" }
+          }
+        }
+      },
+      {
+        "PutRequest": {
+          "Item": {
+            "YearReleased": { "N": "2003" },
+            "Artist": { "S": "John Mayer" },
+            "SongLength": { "S": "4:31" },
+            "AlbumTitle": { "S": "Heavier Things" },
+            "Genre": { "S": "Acoustic" },
+            "SongTitle": { "S": "Clarity" }
+          }
+        }
+      }
+    ]
+  },
+  "ReturnConsumedCapacity": "TOTAL"
+}
