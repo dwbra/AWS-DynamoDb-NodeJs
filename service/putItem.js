@@ -20,7 +20,7 @@ const client = new DynamoDBClient({ region: "ap-southeast-2" });
 /**
  * A function to place items into your dynamodb table.
  * @param {String} tableName The name of the dynamodb table.
- * @param {*} itemObject Object containing the data to put into the table, example above.
+ * @param {Object} itemObject Object containing the data to put into the table, example above.
  */
 const putItemIntoDb = async (tableName, itemObject) => {
   const command = new PutItemCommand({
